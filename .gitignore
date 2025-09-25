@@ -1,4 +1,44 @@
-webapp/__pycache__/__init__.cpython-313.pyc
-webapp/__pycache__/settings.cpython-313.pyc
-webapp/__pycache__/urls.cpython-313.pyc
-webapp/__pycache__/wsgi.cpython-313.pyc
+# Python virtual environment
+*.pyc
+__pycache__/
+webapp/__pycache__/
+*.pyo
+*.pyd
+
+# VSCode
+.vscode/
+
+# Django static/media
+static/
+media/
+
+# Pre-commit/patch cache
+.cache/
+*.patch
+
+# Git
+.git/
+
+# temp files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.save
+*.~
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 其他
+*.log
+*.out
+*.pid
