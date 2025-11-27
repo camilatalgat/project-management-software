@@ -25,20 +25,20 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=100, verbose_name="Название спринта"),
+                    models.CharField(max_length=100, verbose_name="Name of the sprint"),
                 ),
-                ("start_date", models.DateField(verbose_name="Дата начала")),
-                ("end_date", models.DateField(verbose_name="Дата окончания")),
+                ("start_date", models.DateField(verbose_name="Start date")),
+                ("end_date", models.DateField(verbose_name="End date")),
                 (
                     "total_story_points",
                     models.PositiveIntegerField(
-                        default=0, verbose_name="Всего стори поинтов"
+                        default=0, verbose_name="Total story points"
                     ),
                 ),
             ],
             options={
-                "verbose_name": "Спринт",
-                "verbose_name_plural": "Спринты",
+                "verbose_name": "The sprint",
+                "verbose_name_plural": "Sprints",
             },
         ),
         migrations.CreateModel(
@@ -55,11 +55,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "title",
-                    models.CharField(max_length=200, verbose_name="Название задачи"),
+                    models.CharField(max_length=200, verbose_name="Task name"),
                 ),
                 (
                     "story_points",
-                    models.PositiveIntegerField(default=1, verbose_name="Стори поинты"),
+                    models.PositiveIntegerField(default=1, verbose_name="Story points"),
                 ),
                 (
                     "status",
@@ -71,13 +71,13 @@ class Migration(migrations.Migration):
                         ],
                         default="todo",
                         max_length=20,
-                        verbose_name="Статус",
+                        verbose_name="Status",
                     ),
                 ),
                 (
                     "completed_at",
                     models.DateTimeField(
-                        blank=True, null=True, verbose_name="Завершено"
+                        blank=True, null=True, verbose_name="Completed"
                     ),
                 ),
                 (
@@ -92,8 +92,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "Задача",
-                "verbose_name_plural": "Задачи",
+                "verbose_name": "Task",
+                "verbose_name_plural": "Tasks",
             },
         ),
     ]
